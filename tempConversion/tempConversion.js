@@ -1,13 +1,9 @@
-// toFixed returns a string
-// so unary + is used to convert to Number
-
 const ftoc = function(ftemp) {
-  return +((ftemp - 32) * 5 / 9).toFixed(1);
+  return Math.round((ftemp - 32) * (5 / 9) * 10) / 10;
 }
 
-
 const ctof = function(ctemp) {
-  return +(ctemp * 9 / 5 + 32).toFixed(1);
+  return Math.round((ctemp * (9 / 5) + 32) * 10) / 10;
 }
 
 module.exports = {
