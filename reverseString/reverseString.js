@@ -1,10 +1,5 @@
-const reverseString = function(string) {
-
-    let reverse = '';
-    chars = string.split('');
-    chars.forEach((char) => reverse = char + reverse);
-
-    return reverse;
+const reverseString = function (string) {
+    return string.split('').reverse().join('');
 }
 
 module.exports = reverseString
