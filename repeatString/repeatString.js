@@ -1,15 +1,9 @@
 const repeatString = function(string, number) {
-
-    if (number < 0) {
-        return 'ERROR';
-    }
-
+    if (number < 0) return 'ERROR';
     let newString = '';
-
-    for (let i=0; i<number; i++) {
+    while (number--) {
         newString += string;
     }
-
     return newString;
 }
 
