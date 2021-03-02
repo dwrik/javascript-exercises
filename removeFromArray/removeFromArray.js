@@ -1,17 +1,6 @@
-const removeFromArray = function(array, ...elementsToRemove) {
-
-    elementsToRemove.forEach(removeElement);
-
-    function removeElement(num) {
-
-        let index = array.indexOf(num);
-
-        if (index >= 0) {
-            array.splice(index, 1);
-        }
-    }
-
-    return array;
+const removeFromArray = function(...args) {
+    const array = args[0];
+    return array.filter((val) => !args.includes(val));
 }
 
 module.exports = removeFromArray
